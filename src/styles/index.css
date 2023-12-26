@@ -1,0 +1,72 @@
+
+@font-face { 
+    font-family: "Mexcellent"; 
+    src: url('../../public/fonts/mexcellent.ttf'); 
+    font-weight: normal; 
+    font-style: normal; 
+  } 
+
+  @font-face { 
+    font-family: "Mexcellent 3D"; 
+    src: url('../../public/fonts/mexcellent\ 3d.ttf'); 
+    font-weight: normal; 
+    font-style: normal; 
+  } 
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    margin: 0px;
+    overflow-y: auto;
+}
+
+body {
+    background: #000;
+    width:max-content;
+
+}
+
+.neon {
+    font-family: 'Mexcellent 3d', sans-serif;
+    font-size: 130px;
+    color: #45dde2;    
+    font-weight: 400;
+    letter-spacing: 8px;
+    text-shadow: 1px 0px 4px #210685, 2px 0px 4px #420574, 3px 0px 4px #7c047c, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA, 40px 0vw 200px #D42CCA;
+}
+
+.flicker-slow {
+    animation: flicker 30s forwards infinite;
+}
+
+
+
+@keyframes flicker {
+
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        opacity: .99;
+
+    }
+
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+    }
+}
+
+
+
