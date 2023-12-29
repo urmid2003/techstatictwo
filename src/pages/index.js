@@ -4,13 +4,14 @@ import localFont from 'next/font/local';
 import "@/styles/index.css";
 import 'bootstrap/dist/css/bootstrap.min.css'; 
 import Navbar from "./navbar";
-
+import HomePage from "./demo";
 const mexcellent = localFont({ src: '../../public/fonts/mexcellent.ttf' });
 
 
 export default function IndexPage() {
   return (
     <>
+
      <Navbar/>
      
      
@@ -22,6 +23,7 @@ export default function IndexPage() {
       
       <section className={mexcellent.className}>
         <h1 className="text-center">Events</h1>
+        
       </section>
 
       <section className={mexcellent.className}>
