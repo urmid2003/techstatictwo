@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '@/pages/navbar.css';
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -16,7 +17,7 @@ const Navbar = () => {
     };
   }, []);
 
-  // Your existing JavaScript code
+  
   useEffect(() => {
     const hamburger = document.querySelector(".hamburger");
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -39,55 +40,105 @@ const Navbar = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up event listeners
+   
     return () => {
       hamburger.removeEventListener('click', handleHamburgerClick);
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []); // Empty dependency array ensures the effect runs once on mount
+  }, []); 
 
   return (
-    <nav id="navbar" className='navbar'>
-      <button className="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      
-      <div className='innerstyle'>
-        <div>
-          <a className="nav-link" href="/about">Events</a>
+    <nav id="navbar">
+    <div class="nav-container">
+    <button className={`hamburger ${isActive ? 'is-active' : ''}`} onClick={() => setIsActive(!isActive)}>
+  {isActive ? (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      fill="none"
+      stroke="#000"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="0" y1="5" x2="24" y2="5" />
+     <line x1="0" y1="12" x2="24" y2="12" />
+     <line x1="0" y1="19" x2="24" y2="19" />
+    </svg>
+  ) : (
+    <> 
+      <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      fill="none"
+      stroke="#5CE1E6"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <line x1="0" y1="0" x2="24" y2="24" />
+      <line x1="0" y1="24" x2="24" y2="0" />
+    </svg>
+      <span></span>
+      <span></span>
+      <span></span>
+    </>
+  )}
+</button>
+
+
+
+      <div class="menu">
+        <div class="nav-item">
+          <a aria-label="Link to Events" href="#">Events</a>
         </div>
-        <div>
-          <a className="nav-link" href="/about">Gallery</a>
-        </div>
-        <div>
-          <a className="nav-link" href="/about">Department</a>
-        </div>
-        <div>
-          <a className="nav-link" href="/about">Sponsors</a>
-        </div>
-      </div>
-      <div className="mobile-menu">
-          <a aria-label="Link to Home Page" href="#">Home</a>
-          <a href="#" aria-label="Link to Contact Us Page"
-            >Events</a
-          >
+        <div class="nav-item">
           <a
+            aria-label="Link to Gallery"
             href="#"
-            aria-label="Link to Announcements Page on Linktree"
             >Gallery</a
           >
-          <a href="# " aria-label="Link to Events Page"
+        </div>
+        <div class="nav-item">
+          <a
+            href="#"
+            aria-label="Link to Department"
             >Department</a
           >
-         
-          <a aria-label="Link to Sponsors Page" href="#"
-            >Sponsors</a
-          >
-          
         </div>
-    </nav>
+        <div class="nav-item">
+          <a href="#" aria-label="Link to Sponsers"
+            >Sponsers</a
+          >
+        </div>
+      </div>
+
+      <div class="mobile-menu">
+        <a aria-label="Link to Events" href="#">Events</a>
+        <a
+          aria-label="Link to Gallery"
+          href="#"
+          >Gallery</a
+        >
+        <a
+          href="#"
+          aria-label="Link to Department"
+          >Department</a
+        >
+        <a href="#" aria-label="Link to Sponser"
+          >Sponsers</a
+        >
+        
+        
+      
+      </div>
+    </div>
+  </nav>
+
   );
 };
 

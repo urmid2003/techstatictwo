@@ -15,26 +15,26 @@ export default function IndexPage() {
      <Navbar/>
      
      
-      <main className={mexcellent.className}>
+      <main id="sections" className={mexcellent.className}>
         
         <h1 crossOrigin="anonymous" className="neon flicker-slow">Techstatic </h1>
       </main>
       
       
-      <section className={mexcellent.className}>
+      <section  id="sections" className={mexcellent.className}>
         <h1 className="text-center">Events</h1>
         
       </section>
 
-      <section className={mexcellent.className}>
+      <section  id="sections" className={mexcellent.className}>
         <h1 className="text-center">Gallery</h1>
       </section>
 
-      <section className={mexcellent.className}>
+      <section  id="sections" className={mexcellent.className}>
         <h1 className="text-center">Department</h1>
       </section>
 
-      <section className={mexcellent.className}>
+      <section  id="sections" className={mexcellent.className}>
         <h1 className="text-center">Sponsors</h1>
       </section>
     </>
