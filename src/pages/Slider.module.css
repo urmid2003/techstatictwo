@@ -1,0 +1,36 @@
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
+}
+
+.slide {
+  width: 100%;
+  height: calc(100vh - 80px); 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prevButton,
+.nextButton {
+  position: fixed;
+  bottom: 20px;
+  font-size: 24px;
+  background: #fff;
+  border: 1px solid #110202;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}

@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <nav id="navbar">
-    <div class="nav-container">
+    <div className="nav-container">
     <button className={`hamburger ${isActive ? 'is-active' : ''}`} onClick={() => setIsActive(!isActive)}>
   {isActive ? (
     <svg
@@ -92,8 +92,8 @@ const Navbar = () => {
 
 
 
-      <div class="menu">
-        <div class="nav-item">
+      <div className="menu">
+        <div className="nav-item">
           <a aria-label="Link to Events" href="#">Events</a>
         </div>
         <div class="nav-item">
@@ -110,14 +110,14 @@ const Navbar = () => {
             >Department</a
           >
         </div>
-        <div class="nav-item">
+        <div className="nav-item">
           <a href="#" aria-label="Link to Sponsers"
             >Sponsers</a
           >
         </div>
       </div>
 
-      <div class="mobile-menu">
+      <div className="mobile-menu">
         <a aria-label="Link to Events" href="#">Events</a>
         <a
           aria-label="Link to Gallery"
